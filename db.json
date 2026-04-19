@@ -1,0 +1,189 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "email": "sarah@example.com",
+      "role": "admin",
+      "avatar": "https://i.pravatar.cc/150?img=47",
+      "phone": "+1 555-0101",
+      "createdAt": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "email": "michael@example.com",
+      "role": "user",
+      "avatar": "https://i.pravatar.cc/150?img=11",
+      "phone": "+1 555-0102",
+      "createdAt": "2024-02-20"
+    },
+    {
+      "id": 3,
+      "name": "Emma Williams",
+      "email": "emma@example.com",
+      "role": "user",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "phone": "+1 555-0103",
+      "createdAt": "2024-03-10"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "General Consultation",
+      "description": "Comprehensive health assessment and personalized medical advice from our experienced physicians.",
+      "duration": 30,
+      "price": 150,
+      "category": "Primary Care",
+      "icon": "stethoscope",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Dermatology",
+      "description": "Expert skin care treatment, diagnosis, and management of skin conditions.",
+      "duration": 45,
+      "price": 200,
+      "category": "Specialist",
+      "icon": "shield",
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Cardiology",
+      "description": "Advanced cardiac care including ECG, echocardiogram, and heart health assessments.",
+      "duration": 60,
+      "price": 300,
+      "category": "Specialist",
+      "icon": "heart",
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Dental Care",
+      "description": "Complete dental services from routine cleanings to cosmetic procedures.",
+      "duration": 60,
+      "price": 180,
+      "category": "Dental",
+      "icon": "smile",
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "Mental Wellness",
+      "description": "Confidential psychological support and therapy sessions with certified professionals.",
+      "duration": 50,
+      "price": 220,
+      "category": "Mental Health",
+      "icon": "brain",
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "Physiotherapy",
+      "description": "Rehabilitation and physical therapy for injuries, chronic pain, and mobility issues.",
+      "duration": 45,
+      "price": 160,
+      "category": "Rehabilitation",
+      "icon": "activity",
+      "available": true
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Amara Okonkwo",
+      "specialty": "Cardiology",
+      "experience": 12,
+      "rating": 4.9,
+      "reviews": 248,
+      "avatar": "https://i.pravatar.cc/300?img=47",
+      "bio": "Board-certified cardiologist with over 12 years of experience in interventional cardiology and heart failure management.",
+      "available": true,
+      "serviceId": 3
+    },
+    {
+      "id": 2,
+      "name": "Dr. James Whitfield",
+      "specialty": "General Medicine",
+      "experience": 8,
+      "rating": 4.8,
+      "reviews": 312,
+      "avatar": "https://i.pravatar.cc/300?img=33",
+      "bio": "Family medicine physician dedicated to providing comprehensive, patient-centered care for all ages.",
+      "available": true,
+      "serviceId": 1
+    },
+    {
+      "id": 3,
+      "name": "Dr. Yuki Tanaka",
+      "specialty": "Dermatology",
+      "experience": 10,
+      "rating": 4.9,
+      "reviews": 189,
+      "avatar": "https://i.pravatar.cc/300?img=9",
+      "bio": "Specialized in medical and cosmetic dermatology with expertise in advanced laser treatments and skin rejuvenation.",
+      "available": true,
+      "serviceId": 2
+    },
+    {
+      "id": 4,
+      "name": "Dr. Marcus Rivera",
+      "specialty": "Mental Wellness",
+      "experience": 15,
+      "rating": 5,
+      "reviews": 156,
+      "avatar": "https://i.pravatar.cc/300?img=68",
+      "bio": "Licensed clinical psychologist specializing in cognitive behavioral therapy and stress management.",
+      "available": true,
+      "serviceId": 5
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "doctorId": 1,
+      "serviceId": 3,
+      "date": "2025-05-15",
+      "time": "10:00",
+      "status": "confirmed",
+      "notes": "Regular checkup",
+      "createdAt": "2025-05-01"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "doctorId": 3,
+      "serviceId": 2,
+      "date": "2025-05-18",
+      "time": "14:30",
+      "status": "rejected",
+      "notes": "Skin rash consultation",
+      "createdAt": "2025-05-02"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "doctorId": 2,
+      "serviceId": 1,
+      "date": "2025-05-20",
+      "time": "09:00",
+      "status": "confirmed",
+      "notes": "Annual physical",
+      "createdAt": "2025-05-03"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "doctorId": 4,
+      "serviceId": 5,
+      "date": "2025-04-10",
+      "time": "15:00",
+      "status": "completed",
+      "notes": "Anxiety management session",
+      "createdAt": "2025-04-01"
+    }
+  ]
+}
