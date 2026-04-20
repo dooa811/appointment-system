@@ -1,30 +1,71 @@
-import api from './api';
+// ملاحظة: قمنا بتعطيل استيراد api لأنه لن نحتاجه في نسخة العرض (Demo)
+// import api from './api'; 
 
 export const authService = {
+  // 1. تسجيل الدخول باستخدام البيانات التجريبية
   login: async (email, password) => {
-    const res = await api.get(`/users?email=${email}&password=${password}`);
-    if (res.data.length === 0) throw new Error('Invalid email or password');
-    return res.data[0];
+    // محاكاة تأخير بسيط ليعطي شعور حقيقياً (نصف ثانية)
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // البيانات المسموح لها بالدخول (التي تظهر في الصورة عندك)
+    const demoUsers = [
+      { id: 1, email: 'sarah@example.com', password: 'password123', name: 'Sarah', role: 'admin' },
+      { id: 2, email: 'michael@example.com', password: 'password123', name: 'Michael', role: 'user' }
+    ];
+
+    const user = demoUsers.find(u => u.email === email && u.password === password);
+
+    if (!user) {
+      throw new Error('الايميل أو كلمة المرور غير صحيحة');
+    }
+
+    // حفظ المستخدم في الـ localStorage ليبقى مسجلاً عند تحديث الصفحة
+    localStorage.setItem('user', JSON.stringify(user));
+    
+    // إرجاع بيانات المستخدم (بدون كلمة المرور لأسباب أمنية حتى في الديمو)
+    const { password: _, ...userWithoutPassword } = user;
+    return userWithoutPassword;
   },
 
+  // 2. تسجيل مستخدم جديد (محاكاة)
   register: async (userData) => {
-    // Check if email exists
-    const check = await api.get(`/users?email=${userData.email}`);
-    if (check.data.length > 0) throw new Error('Email already registered');
-    const res = await api.post('/users', {
+    await new Promise(resolve => setTimeout(resolve, 800));
+
+    // فحص بسيط إذا كان الايميل مستخدم في الديمو
+    if (userData.email === 'sarah@example.com') {
+      throw new Error('هذا الايميل مسجل مسبقاً');
+    }
+
+    const newUser = {
       ...userData,
+      id: Math.floor(Math.random() * 1000),
       role: 'user',
       createdAt: new Date().toISOString().split('T')[0],
-    });
-    return res.data;
+    };
+
+    console.log('تم التسجيل بنجاح (وضع العرض):', newUser);
+    return newUser;
   },
 
+  // 3. جلب كل المستخدمين (لعرضهم في لوحة التحكم مثلاً)
   getAllUsers: async () => {
-    const res = await api.get('/users');
-    return res.data;
+    await new Promise(resolve => setTimeout(resolve, 300));
+    return [
+      { id: 1, name: 'Sarah', email: 'sarah@example.com', role: 'admin', createdAt: '2023-01-01' },
+      { id: 2, name: 'Michael', email: 'michael@example.com', role: 'user', createdAt: '2023-02-15' },
+      { id: 3, name: 'Guest User', email: 'guest@example.com', role: 'user', createdAt: '2023-03-10' }
+    ];
   },
 
+  // 4. محاكاة حذف مستخدم
   deleteUser: async (id) => {
-    await api.delete(`/users/${id}`);
+    await new Promise(resolve => setTimeout(resolve, 400));
+    console.log(`تم حذف المستخدم صاحب الرقم ${id} بنجاح (Demo Mode)`);
+    return { success: true };
   },
+
+  // 5. تسجيل الخروج
+  logout: () => {
+    localStorage.removeItem('user');
+  }
 };

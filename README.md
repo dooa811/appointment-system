@@ -5,7 +5,7 @@ A full-stack frontend application for managing medical appointments, built with 
 ![MediBook Preview](./preview.png)
 
 ## 🔗 Live Demo
-[View Live Demo](YOUR_VERCEL_LINK_HERE)
+[View Live Demo](appointment-system-three-alpha.vercel.app)
 
 ## ✨ Features
 
@@ -85,7 +85,13 @@ src/
 ├── hooks/           # Custom React hooks
 └── utils/           # Helper functions
 
+> ⚠️ **Note:** This project uses a local mock API (JSON Server).
+> To test login functionality, clone the repo and run `npm run api` locally.
+> 
+> **Demo credentials:**
+> - Admin: sarah@example.com / password123  
+> - User: michael@example.com / password123
+
 ## 👩‍💻 Author
-**Your Name**  
+**Doaa Zaqout**  
 Frontend Developer  
-[LinkedIn](YOUR_LINKEDIN) · [GitHub](YOUR_GITHUB)
