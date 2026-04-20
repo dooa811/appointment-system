@@ -1,6 +1,3 @@
-// ملاحظة: قمنا بتعطيل استيراد api لأنه لن نحتاجه في نسخة العرض (Demo)
-// import api from './api'; 
-
 export const authService = {
   // 1. تسجيل الدخول باستخدام البيانات التجريبية
   login: async (email, password) => {
@@ -69,7 +66,7 @@ export const authService = {
     localStorage.removeItem('user');
   },
 
-  
+
     // جلب الخدمات (لحل مشكلة تعليق صفحة الخدمات)
   getServices: async () => {
     await new Promise(resolve => setTimeout(resolve, 500));

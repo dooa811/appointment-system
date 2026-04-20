@@ -1,5 +1,3 @@
-// استبدلي محتوى appointmentService.js بهذا:
-
 export const appointmentService = {
   create: async (data) => {
     await new Promise(resolve => setTimeout(resolve, 600));

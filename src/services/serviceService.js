@@ -1,6 +1,3 @@
-// قمنا بتعطيل api لأنه يسبب الخطأ أونلاين
-// import api from './api'; 
-
 export const serviceService = {
   getAll: async () => {
     // محاكاة تأخير بسيط لراحة المستخدم
