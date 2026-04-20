@@ -1,3 +1,7 @@
+import doc1 from '../assets/images/doc1.avif';
+import doc2 from '../assets/images/doc2.avif';
+import doc3 from '../assets/images/doc3.avif';
+
 export const serviceService = {
   getAll: async () => {
     // محاكاة تأخير بسيط لراحة المستخدم
@@ -27,11 +31,31 @@ export const serviceService = {
 
   getAllDoctors: async () => {
     await new Promise(resolve => setTimeout(resolve, 500));
-    // بيانات تجريبية للأطباء لكي تظهر في القوائم
     return [
-      { id: 1, name: 'Dr. Ahmad Ali', specialty: 'General Practice' },
-      { id: 2, name: 'Dr. Sara Mansour', specialty: 'Dentist' },
-      { id: 3, name: 'Dr. John Doe', specialty: 'Cardiologist' }
+      { 
+        id: 1, 
+        name: 'Dr. Ahmad Ali', 
+        specialty: 'General Practice', 
+        avatar: doc1, // استخدام الصورة المحلية هنا
+        rating: 4.9, 
+        reviews: 120 
+      },
+      { 
+        id: 2, 
+        name: 'Dr. Sara Mansour', 
+        specialty: 'Dentist', 
+        avatar: doc2, 
+        rating: 4.8, 
+        reviews: 95 
+      },
+      { 
+        id: 3, 
+        name: 'Dr. John Doe', 
+        specialty: 'Cardiologist', 
+        avatar: doc3, 
+        rating: 5.0, 
+        reviews: 150 
+      }
     ];
   },
 };
