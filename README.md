@@ -85,12 +85,7 @@ src/
 ├── hooks/           # Custom React hooks
 └── utils/           # Helper functions
 
-> ⚠️ **Note:** This project uses a local mock API (JSON Server).
-> To test login functionality, clone the repo and run `npm run api` locally.
-> 
-> **Demo credentials:**
-> - Admin: sarah@example.com / password123  
-> - User: michael@example.com / password123
+
 
 ## 👩‍💻 Author
 **Doaa Zaqout**  
