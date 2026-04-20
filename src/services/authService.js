@@ -67,5 +67,25 @@ export const authService = {
   // 5. تسجيل الخروج
   logout: () => {
     localStorage.removeItem('user');
+  },
+
+  
+    // جلب الخدمات (لحل مشكلة تعليق صفحة الخدمات)
+  getServices: async () => {
+    await new Promise(resolve => setTimeout(resolve, 500));
+    return [
+      { id: 1, name: 'General Consultation', price: 50, duration: '30 min' },
+      { id: 2, name: 'Dental Checkup', price: 80, duration: '45 min' },
+      { id: 3, name: 'Cardiology', price: 120, duration: '60 min' }
+    ];
+  },
+
+  // جلب المواعيد (لحل مشكلة صفحة المواعيد)
+  getAppointments: async () => {
+    await new Promise(resolve => setTimeout(resolve, 500));
+    return [
+      { id: 1, service: 'General Consultation', date: '2023-10-25', time: '10:00 AM', status: 'Confirmed' }
+    ];
   }
+
 };
