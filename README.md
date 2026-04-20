@@ -5,7 +5,7 @@ A full-stack frontend application for managing medical appointments, built with 
 ![MediBook Preview](./preview.png)
 
 ## 🔗 Live Demo
-[View Live Demo](appointment-system-three-alpha.vercel.app)
+[View Live Demo](https://vercel.com/doaa-zaqouts-projects/appointment-system)
 
 ## ✨ Features
 
