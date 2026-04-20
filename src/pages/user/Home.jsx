@@ -9,6 +9,11 @@ import Button from '../../components/ui/Button'
 import { serviceService } from '../../services/serviceService'
 import { useState } from 'react'
 
+import doc1 from '../../assets/images/doc1.avif';
+import doc2 from '../../assets/images/doc2.avif';
+import doc3 from '../../assets/images/doc3.avif';
+
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 0) => ({
@@ -32,10 +37,26 @@ const FEATURES = [
 ]
 
 const TESTIMONIALS = [
-  { name: 'Layla Hassan',   avatar: 'https://i.pravatar.cc/80?img=47', rating: 5, text: 'MediBook made scheduling so effortless. My doctor was amazing and the whole experience felt premium.' },
-  { name: 'James Whitmore', avatar: 'https://i.pravatar.cc/80?img=33', rating: 5, text: 'I booked a cardiologist in minutes. No waiting on hold, no confusion — just clean and simple.' },
-  { name: 'Yuki Tanaka',    avatar: 'https://i.pravatar.cc/80?img=9',  rating: 5, text: 'The best healthcare booking platform I\'ve used. The reminders and interface are outstanding.' },
+  { 
+    name: 'Layla Hassan',   
+    avatar: doc1, // استبدلنا الرابط بـ doc1
+    rating: 5, 
+    text: 'MediBook made scheduling so effortless. My doctor was amazing and the whole experience felt premium.' 
+  },
+  { 
+    name: 'James Whitmore', 
+    avatar: doc2, // استبدلنا الرابط بـ doc2
+    rating: 5, 
+    text: 'I booked a cardiologist in minutes. No waiting on hold, no confusion — just clean and simple.' 
+  },
+  { 
+    name: 'Yuki Tanaka',    
+    avatar: doc3, // استبدلنا الرابط بـ doc3
+    rating: 5, 
+    text: 'The best healthcare booking platform I\'ve used. The reminders and interface are outstanding.' 
+  },
 ]
+
 
 export default function Home() {
   const navigate = useNavigate()
